@@ -1,7 +1,7 @@
 export default {
 	async home(require, response) {
 		return response.json({
-			title: "Its working",
+			title: "Isso está vindo da API REST",
 		});
 	},
 };

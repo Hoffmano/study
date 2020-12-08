@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+    web:
+        container_name: StudyWeb
+        build: ./web
+        depends_on:
+            - backend
+        ports:
+            - "8080:8080"
+        networks:
+            - app-connect
+        volumes:
+            - ./web:/study/web
+    backend:
+        container_name: StudyBackend
+        build: ./backend
+        ports:
+            - "3333:3333"
+        networks:
+            - app-connect
+        volumes:
+            - ./backend:/study/backend
+
+networks:
+    app-connect:
+        driver: bridge

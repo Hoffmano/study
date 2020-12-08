@@ -1,5 +1,12 @@
 module.exports = {
-    parser:"vue-eslint-parser",
+	parser: "vue-eslint-parser",
+    parserOptions: {
+        ecmaVersion: 2019,
+        sourceType: "module",
+        ecmaFeatures: {
+            jsx:true
+        },
+    },
 	extends: [
 		// add more generic rulesets here, such as:
 		// 'eslint:recommended',
